@@ -11,7 +11,7 @@ function Game({ onGameOver }) {
   useEffect(() => {
     document.body.style.cursor = 'none'
     return () => {
-      document.body.style.cursor = 'default'
+      document.body.style.cursor = 'none'
     }
   }, [])
 
@@ -47,7 +47,7 @@ function Game({ onGameOver }) {
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          maxPolarAngle={Math.PI}
+          maxPolarAngle={Math.PI / 2}
           minPolarAngle={0}
         />
       </Canvas>
